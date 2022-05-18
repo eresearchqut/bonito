@@ -1,0 +1,24 @@
+name: Bonito Docker Image Build
+# This builds the docker image and pushes it to GitHib packages
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build_push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v2
+        name: Check out code
+      - uses: mr-smithers-excellent/docker-build-push@v5.6
+        name: Docker Build & Push Action
+        with:
+          image: bonito
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
