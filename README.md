@@ -2,6 +2,5 @@
 A docker image for the Oxford Nanopore Technologies Bonito software
 
 ## Base image
-https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch
+nvidia/cuda:11.3.0-runtime-ubuntu20.04
 
-Version 21.10
