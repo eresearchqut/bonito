@@ -1,0 +1,6 @@
+numpy~=1.19.5
+onnxruntime==1.10.0
+torch==1.10.0+cu113
+torchvision==0.11.0+cu113
+torchaudio==0.10.0
+ont-bonito-cuda113==0.5.1
